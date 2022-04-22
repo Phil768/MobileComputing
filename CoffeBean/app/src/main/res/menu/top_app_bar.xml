@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+<group
+    android:id="@+id/group">
+
+</group>
+<group
+    android:id="@+id/group_1">
+    <item
+        android:id="@+id/order_historyy"
+        android:title="Order history"
+        android:icon="@drawable/ic_baseline_history_24"/>
+</group>
+
+    <group
+        android:id="@+id/group_2">
+        <item
+            android:id="@+id/clear_cart"
+            android:title="Clear cart"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"/>
+    </group>
+
+    <group
+        android:id="@+id/group_3">
+        <item
+            android:id="@+id/clear_favourites"
+            android:title="Clear favourites"
+            android:icon="@drawable/ic_baseline_favorite_24"/>
+    </group>
+
+    <group
+        android:id="@+id/group_4">
+        <item
+            android:id="@+id/suggest"
+            android:title="Make suggestion!"
+            android:icon="@drawable/ic_baseline_add_24"/>
+    </group>
+</menu>
