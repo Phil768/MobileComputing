@@ -45,15 +45,70 @@ public class DataBaseOpenHelper extends SQLiteOpenHelper
     @Override
     public void onCreate(SQLiteDatabase db)
     {
-
-        /*
         //Creating the table that will hold all the menu items.
-        String createTable = "CREATE TABLE Menu(Name VARCHAR(40))";
+        String createMenuTable =
+                "CREATE TABLE Menu (" +
+                        "           ID INTEGER," +
+                        "            Name Text," +
+                        "            Price INTEGER,\n" +
+                        "            Description TEXT," +
+                        "            Image BLOB" +
+                        "        )";
         //Executing the above SQL queries.
-        db.execSQL(createTable);
-        */
+        db.execSQL(createMenuTable);
 
+        //Creating the table that will hold all the cart items.
+        String createCartTable =
+                "CREATE TABLE Favourites (" +
+                        "            ID INTEGER," +
+                        "            Name TEXT," +
+                        "            Size Text," +
+                        "            SugarAndCream TEXT," +
+                        "            Amount TEXT," +
+                        "            Price INTEGER)";
+        //Executing the above query.
+        db.execSQL(createCartTable);
 
+        //Creating the table that will hold all the favourites items.
+        String createFavouritesTable =
+                "CREATE TABLE Favourites (" +
+                        "            ID INTEGER," +
+                        "            Name TEXT," +
+                        "            Size Text," +
+                        "            SugarAndCream TEXT," +
+                        "            Amount TEXT," +
+                        "            Price INTEGER)";
+
+        //Executing the above query.
+        db.execSQL(createFavouritesTable);
+
+        String createOrdersTable =
+                "CREATE TABLE Orders (" +
+                        "            ID INTEGER," +
+                        "            Name TEXT," +
+                        "            Surname TEXT," +
+                        "            Phone INTEGER," +
+                        "            Destination TEXT)";
+        //Executing the above query.
+        db.execSQL(createOrdersTable);
+
+        String createOrderDetailsTable =
+                "CREATE TABLE Orders (" +
+                        "            ID INTEGER," +
+                        "            Name TEXT," +
+                        "            Surname TEXT," +
+                        "            Phone INTEGER," +
+                        "            Destination TEXT)";
+        //Executing the above query.
+        db.execSQL(createOrderDetailsTable);
+
+        String createSuggestionsTable =
+                "CREATE TABLE Suggestions (" +
+                        "            Name TEXT," +
+                        "            Description TEXT," +
+                        "            Image BLOB)";
+        //Executing the above query.
+        db.execSQL(createSuggestionsTable);
     }
 
     @Override
