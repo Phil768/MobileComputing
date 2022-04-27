@@ -25,6 +25,7 @@
     <View
         android:layout_width="392dp"
         android:layout_height="3dp"
+        android:layout_marginLeft="20sp"
         android:background="#702F0C"
         android:fadingEdge="horizontal"
         app:layout_constraintEnd_toEndOf="parent"

@@ -17,6 +17,7 @@ import com.example.coffebean.R;
 import com.example.coffebean.ScreenTwo;
 import com.example.coffebean.ui.Menu.MenuItemModel;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>
@@ -99,7 +100,12 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>
             //Storing the returned name in a string.
             String menuItemName = db.getItemName(i);
             //Storing the image retrieved from the database into a bitmap variable.
-            Bitmap bitmap = db.getMenuImage(i);
+            byte[] image = new byte[0];
+            try {
+                image = db.getMenuImage(i);
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
             //Getting description of item from the database.
             String description = db.getMenuDescription(i);
             //Creating a new intent instance.
@@ -111,7 +117,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>
             //Passing data to the activity.
             intent.putExtra("Price", menuItemPrice);
             //Passing image data to the activity.
-            intent.putExtra("BitmapImage", bitmap);
+            intent.putExtra("ByteImage", image);
             //Passing description data to the activity.
             intent.putExtra("Description", description);
             //redirecting to a new activity.

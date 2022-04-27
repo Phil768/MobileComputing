@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,9 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.coffebean.ui.Favourites.FavouritesItemModel;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 
 /*
 * ScreenTwo:
@@ -241,8 +245,14 @@ public class ScreenTwo extends AppCompatActivity
     {
         //Creating a new intent instance that will be able to receive by the 'getIntent()' method is also used to receive the intent passed from the fragment.
         Intent intent = getIntent();
-        //Storing the image received from the fragment into a Bitmap variable.
-        Bitmap bitmap = (Bitmap) intent.getParcelableExtra("BitmapImage");
+        //Storing the image received from the fragment into a byte[] array.
+        byte[] image = intent.getByteArrayExtra("ByteImage");
+
+        //Converting the byte[] array to a byte input string. This is done to make it easier for the Bitmap to display the image
+        InputStream stream = new ByteArrayInputStream(image);
+
+        //converting the byte stream to a bitmap in order to be able to display it properly.
+        Bitmap bitmap = BitmapFactory.decodeStream(stream);
 
         //Getting the desired ImageView by id.
         ItemImageView = (ImageView) findViewById(R.id.itemImageView);
