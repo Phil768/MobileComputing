@@ -175,6 +175,10 @@ public class DataBaseOpenHelper extends SQLiteOpenHelper
         //Creating a new content values object which allows us to insert items into the database.
         ContentValues cv = new ContentValues();
 
+        /*
+        * Source for encoding the images: https://www.base64-image.de/
+        */
+
         //Menu item 1.
         cv.put("ID", 1);
         cv.put("Name", "Black coffee");
@@ -432,6 +436,7 @@ public class DataBaseOpenHelper extends SQLiteOpenHelper
                 {
                     if(encodedImage.contains(separator))
                     {
+                        //Source: https://stackoverflow.com/questions/4837110/how-to-convert-a-base64-string-into-a-bitmap-image-to-show-it-in-a-imageview
                         encodedImage = encodedImage.split(separator)[1];
                         decodedImage = Base64.getDecoder().decode(encodedImage.getBytes(StandardCharsets.UTF_8));
                     }
