@@ -2,6 +2,7 @@ package com.example.coffebean;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Build;
@@ -51,6 +52,9 @@ public class checkout extends AppCompatActivity
         surnameTxt = (EditText) findViewById(R.id.surnameTxt);
         phoneTxt = (EditText) findViewById(R.id.phoneTxt);
         destinationTxt = (EditText) findViewById(R.id.suggestionDesc);
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
 
         //Instance of the back arrow in the header and what happens if it is clicked.
         backArrowBtn = (ImageView) findViewById(R.id.previousArrowBtn);

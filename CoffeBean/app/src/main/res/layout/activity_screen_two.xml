@@ -112,6 +112,7 @@
             android:textColor="#000000"
             android:textSize="20sp" />
 
+        <!--Image reference: https://www.dreamstime.com/coffee-paper-cup-small-medium-large-size-vector-coffee-paper-cup-small-medium-large-size-vector-template-image197140152 -->
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="283dp"

@@ -31,7 +31,7 @@ import com.google.android.material.navigation.NavigationView;
 *   - Cart
 * In these three fragments the user will perform most of the activities presented by the app.
 *
-* This activity is also responsible for the NavigationDrawer. This drawer will allow the user to perform some secondary actions that will make the app
+* This activity is also responsible for the Drawer layout. This drawer will allow the user to perform some secondary actions that will make the app
 * feel much more dynamic.
 * */
 
@@ -69,6 +69,8 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
         toolbar = (Toolbar) findViewById(R.id.nav_toolbar);
         navDrawer = (ImageView) findViewById(R.id.previousArrowBtn);
 
+        //Badges reference: https://material.io/components/bottom-navigation/android#using-bottom-navigation
+
         //The below will handle the badge display of items in the cart.
         //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         //Creating an instance of the DatabaseOpenHelper.
@@ -98,7 +100,7 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
         //Number that will be displayed as a badge.
         favBadge.setNumber(favBadgeNumber);
 
-        //This code represents the toolbar that can be called upon and retracted.
+        //This code represents the drawer layout that can be called upon and retracted.
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.drawer_open, R.string.drawer_close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
@@ -109,13 +111,13 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
         setNavigationViewListener();
     }
 
-    //This method opens the navigationDrawer.
-    public void openDrawer()
+    //This method opens the Drawer layout.
+    public void openDrawer()//(*)
     {
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
-    //Source: https://stackoverflow.com/questions/42297381/onclick-event-in-navigation-drawer
+    //Source: https://stackoverflow.com/questions/42297381/onclick-event-in-navigation-drawer (*)
     //This method handles what happens when an option of teh navigationDrawer is selected.
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item)

@@ -8,6 +8,7 @@
     android:foregroundTint="#FFFFFF"
     tools:context=".MainActivity">
 
+    <!--GIF reference: https://68.media.tumblr.com/9c85006376c236d84417b501136d6d72/tumblr_ofz7xefr7l1qie9jco1_500.gif -->
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
         android:layout_width="642dp"
