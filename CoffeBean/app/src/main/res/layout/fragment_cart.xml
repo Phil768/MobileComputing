@@ -48,7 +48,7 @@
     <Button
         android:id="@+id/checkoutBtn"
         style="@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush"
-        android:layout_width="239dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="#784D17"

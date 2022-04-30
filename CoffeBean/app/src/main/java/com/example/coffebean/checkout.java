@@ -53,8 +53,6 @@ public class checkout extends AppCompatActivity
         phoneTxt = (EditText) findViewById(R.id.phoneTxt);
         destinationTxt = (EditText) findViewById(R.id.suggestionDesc);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
 
         //Instance of the back arrow in the header and what happens if it is clicked.
         backArrowBtn = (ImageView) findViewById(R.id.previousArrowBtn);
