@@ -1,0 +1,1 @@
+All references for each image used is commented in the inline documentation, eahc refernece with its corresponding image. These references are located in 'DataBaseOpenHelper.java'
