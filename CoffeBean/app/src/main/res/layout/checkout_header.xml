@@ -4,7 +4,7 @@
     style="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
     android:layout_width="match_parent"
     android:layout_height="?actionBarSize"
-    android:background="#714005">
+    android:background="@color/border">
 
     <RelativeLayout
         android:layout_width="match_parent"

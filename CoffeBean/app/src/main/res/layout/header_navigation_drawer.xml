@@ -15,7 +15,7 @@
         android:fontFamily="@font/delagothicone_regular"
         android:text="Coffe Bean"
         android:textAppearance="?attr/textAppearanceHeadline6"
-        android:textColor="#DC6E3F0E"
+        android:textColor="@color/title_color"
         android:textSize="34sp" />
 
 </LinearLayout>

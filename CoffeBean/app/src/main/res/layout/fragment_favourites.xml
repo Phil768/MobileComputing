@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4BFA0"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".ui.Favourites.FavouritesFragment">
 
@@ -16,14 +16,14 @@
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:text="Favourites"
-        android:textColor="#702F0C"
+        android:textColor="@color/title_color"
         android:textSize="40sp" />
 
     <View
         android:layout_width="392dp"
         android:layout_height="3dp"
         android:layout_marginStart="10sp"
-        android:background="#702F0C"
+        android:background="@color/title_color"
         android:fadingEdge="horizontal" />
 
     <androidx.recyclerview.widget.RecyclerView

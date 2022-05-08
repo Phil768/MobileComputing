@@ -51,6 +51,6 @@
         android:layout_marginStart="19dp"
         android:layout_marginEnd="42dp"
         android:layout_marginBottom="-27dp"
-        android:background="#702F0C"
+        android:background="@color/title_color"
         android:fadingEdge="horizontal" />
 </RelativeLayout>

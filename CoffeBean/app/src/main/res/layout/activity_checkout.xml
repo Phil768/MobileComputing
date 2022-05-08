@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4BFA0"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".checkout">
 
@@ -24,7 +24,7 @@
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:text="Checkout"
-        android:textColor="#702F0C"
+        android:textColor="@color/title_color"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header" />
@@ -33,7 +33,7 @@
         android:id="@+id/view7"
         android:layout_width="392dp"
         android:layout_height="3dp"
-        android:background="#702F0C"
+        android:background="@color/title_color"
         android:fadingEdge="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,9 +76,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout11"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
         <TextView
             android:id="@+id/surnameTextView"
@@ -105,9 +105,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout12">
 
         <TextView
             android:id="@+id/nameTextView"
@@ -184,7 +184,7 @@
         android:fontFamily="cursive"
         android:text="Enjoy!"
         android:textAlignment="center"
-        android:textColor="#702F0C"
+        android:textColor="@color/title_color"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/orderBtn"
@@ -196,14 +196,11 @@
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:layout_alignParentTop="true"
-        android:background="#784D17"
-        android:backgroundTint="#653F07"
         android:paddingBottom="10sp"
         android:text="Order"
         android:textAlignment="center"
-        android:textColor="#85470A"
+        android:textColor="@color/text"
         android:textSize="17sp"
-        app:iconTint="#73440A"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
