@@ -32,14 +32,14 @@ import java.util.Base64;
 *
 * All the required tables and the required data for the menu is created in the onCreate() method. This will allow the app to function properly.
 *
-* NOTE:  In the event that the tables are not created correctly or there seems to be an issue regarding the database (unlikely since it has been tested but it could happen), follow this procedure:
+* NOTE:  In the unlikely event that the tables are not created correctly or there seems to be an issue regarding the database (unlikely since it has been tested but it could happen), follow this procedure:
 * ^^^^^
 *       The database can be accessed through an app, such as SQLite DB Browser. All that needs to be done is download the database from the files of the phone and import
 *       it into the DB Browser.(To download the database:- Device File Explorer -> data -> data -> databases -> right click and 'save as' on the desired database). This
 *       database can also be imported using a similar manner. Go to the same folder and instead of 'save as' click upload and choose the correct file in the explorer.
 *       (Once again this is not the correct way to interact with the database, however, on the occasion that something bad happens, this would act as a backup).
 *
-*   The methods following this will act as DML(Data Manipulation Language). The are the SELECT, ADD and DELETE statements. Each table has its own set of these methods
+*   The methods following this will act as DML(Data Manipulation Language). The are the SELECT, ADD and DELETE statements. Each table has its own set of these methods.
 * so its data could be manipulated more freely.
 * */
 
@@ -271,6 +271,7 @@ public class DataBaseOpenHelper extends SQLiteOpenHelper
 
     }
 
+    //////////////////////////////////////////////////////////////////// MENU METHODS /////////////////////////////////////////////////////////////////////////
 
     //Get all menu items from the database.
     public ArrayList<MenuItemModel> getMenuItems()
