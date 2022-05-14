@@ -481,7 +481,5 @@ public class ScreenTwo extends AppCompatActivity
                 }
             }
         });
-
-
     }
 }

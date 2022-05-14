@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,9 +21,6 @@ import android.widget.Toast;
 
 public class suggestBeverage extends AppCompatActivity
 {
-    //Request code for gallery.
-    int GALLERY_REQUEST = 100;
-
     /*
     * References of the below class for retrieving images from gallery and saving them in database:
     * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -71,7 +69,15 @@ public class suggestBeverage extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                openGallery(view);
+                //Since Lollipop has the minimum SDK of 21, the lowest that we will be using.
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                {
+                    openGallery(view);
+                }
+                else
+                {
+                    Toast.makeText(suggestBeverage.this, "This feature is unavailable.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
